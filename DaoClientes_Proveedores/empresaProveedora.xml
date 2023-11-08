@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<empresas_proveedoras>
+  <empresa_proveedora>
+    <idEmpProveedora>1</idEmpProveedora>
+    <idPedido>101</idPedido>
+    <cif>ABC123</cif>
+    <nombre>Proveedor A</nombre>
+    <direccionPostal>Calle Principal 123</direccionPostal>
+    <direccionWeb>www.proveedorA.com</direccionWeb>
+    <telefono>555123456</telefono>
+    <personaContacto>Contacto A</personaContacto>
+  </empresa_proveedora>
+  <empresa_proveedora>
+    <idEmpProveedora>2</idEmpProveedora>
+    <idPedido>102</idPedido>
+    <cif>XYZ456</cif>
+    <nombre>Proveedor B</nombre>
+    <direccionPostal>Avenida Secundaria 456</direccionPostal>
+    <direccionWeb>www.proveedorB.com</direccionWeb>
+    <telefono>666789012</telefono>
+    <personaContacto>Contacto B</personaContacto>
+  </empresa_proveedora>
+  <empresa_proveedora>
+    <idEmpProveedora>3</idEmpProveedora>
+    <idPedido>103</idPedido>
+    <cif>DEF789</cif>
+    <nombre>Proveedor C</nombre>
+    <direccionPostal>Calle Terciaria 789</direccionPostal>
+    <direccionWeb>www.proveedorC.com</direccionWeb>
+    <telefono>777234567</telefono>
+    <personaContacto>Contacto C</personaContacto>
+  </empresa_proveedora>
+</empresas_proveedoras>

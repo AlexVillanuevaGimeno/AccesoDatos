@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<juguetes>
+  <juguete>
+    <idJuguete>1</idJuguete>
+    <nombreJuguete>Muñeca</nombreJuguete>
+    <precioUnidad>20</precioUnidad>
+  </juguete>
+  <juguete>
+    <idJuguete>2</idJuguete>
+    <nombreJuguete>Carro de Control Remoto</nombreJuguete>
+    <precioUnidad>30</precioUnidad>
+  </juguete>
+  <juguete>
+    <idJuguete>3</idJuguete>
+    <nombreJuguete>Rompecabezas</nombreJuguete>
+    <precioUnidad>15</precioUnidad>
+  </juguete>
+</juguetes>

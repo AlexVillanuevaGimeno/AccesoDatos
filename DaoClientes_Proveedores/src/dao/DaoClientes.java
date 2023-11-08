@@ -1,6 +1,5 @@
 package dao;
 
-import bean.DetalleNotaPago;
 import bean.Ticket;
 import motor.MotorDerby;
 

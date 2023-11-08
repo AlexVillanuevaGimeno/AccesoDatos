@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tickets>
+  <ticket>
+    <Id_Ticket>3</Id_Ticket>
+    <CIF>DEF789</CIF>
+    <Nombre>Juguetes Divertidos</Nombre>
+    <Direccion>Calle Divertida 789</Direccion>
+    <Telefono>555666777</Telefono>
+    <FechaVenta>2023-11-01</FechaVenta>
+  </ticket>
+  <ticket>
+    <Id_Ticket>4</Id_Ticket>
+    <CIF>GHI012</CIF>
+    <Nombre>Tienda de Juguetes B</Nombre>
+    <Direccion>Avenida Principal 567</Direccion>
+    <Telefono>111222333</Telefono>
+    <FechaVenta>2023-11-02</FechaVenta>
+  </ticket>
+  <ticket>
+    <Id_Ticket>5</Id_Ticket>
+    <CIF>JKL345</CIF>
+    <Nombre>Juguetes Creativos</Nombre>
+    <Direccion>Calle Creativa 890</Direccion>
+    <Telefono>999888777</Telefono>
+    <FechaVenta>2023-11-03</FechaVenta>
+  </ticket>
+</tickets>

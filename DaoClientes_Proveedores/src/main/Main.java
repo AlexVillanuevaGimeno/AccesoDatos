@@ -185,7 +185,45 @@ public class Main {
                     break;
 
                 case 6:
-                    ImportarTabla.importarTabla(motorDerby, "nombre-de-la-tabla-a-importar", "nombre-tabla-en-xml");
+                    int tablaImp;
+                    do{
+                        System.out.println("XML A IMPORTAR:");
+                        System.out.println("1. TICKET");
+                        System.out.println("2. EMPRESA PROVEEDORA");
+                        System.out.println("3. JUGUETE");
+                        System.out.println("4. USUARIO");
+                        System.out.println("0. Salir");
+
+                        // Obtener la opción del usuario
+                        System.out.print("Elige una opción: ");
+                        scanner.nextLine(); //LIMPIO MEMORIA SCANNER
+                        tablaImp = scanner.nextInt();
+
+                        switch (tablaImp){
+                            case 1:
+                                ImportarTabla.importarTabla(motorDerby, "ticket", "ticket");
+                                break;
+                            case 2:
+                                ImportarTabla.importarTabla(motorDerby, "empresa_proveedora", "empresa_proveedora");
+
+                                break;
+                            case 3:
+                                ImportarTabla.importarTabla(motorDerby, "juguete", "juguete");
+
+                                break;
+                            case 4:
+                                ImportarTabla.importarTabla(motorDerby, "usuario", "usuario");
+
+                                break;
+                            case 0:
+                                System.out.println("Volviendo al menú principal");
+                                break;
+                            default:
+                                System.out.println("Opción no válida. Por favor, elige una opción válida.");
+                                break;
+                        }
+
+                    }while (tablaImp != 0);
                     break;
                 case 0:
                     System.out.println("Saliendo del programa. ¡Hasta luego!");
