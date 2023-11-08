@@ -39,7 +39,7 @@ public class ImportarTabla {
                 }
                 reader.next();
             }
-
+            reader.close();
             System.out.println("Importación completada en la tabla: " + nombreTabla);
 
         } catch (Exception e) {

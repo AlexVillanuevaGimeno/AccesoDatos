@@ -146,11 +146,15 @@ public class Main {
                     break;
 
                 case 5:
-                    ExportarTabla.exportarTabla(motorDerby, "nombre-tabla");
+                    System.out.println("QUE TABLA QUIERES EXPORTAR?");
+                    scanner.nextLine();
+                    String nombreTabla = scanner.nextLine();
+                    ExportarTabla.exportarTabla(motorDerby, nombreTabla);
+                    break;
 
                 case 6:
                     ImportarTabla.importarTabla(motorDerby, "nombre-de-la-tabla-a-importar", "nombre-tabla-en-xml");
-
+                    break;
                 case 0:
                     System.out.println("Saliendo del programa. ¡Hasta luego!");
                     break;

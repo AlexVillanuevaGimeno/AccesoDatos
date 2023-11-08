@@ -31,6 +31,7 @@ public class MotorDerby {
     private ResultSet resultSet;
 
     DriverManager driverManager;
+    private ResultSet resultSet1;
 
     public void connect() {
         try {
@@ -80,7 +81,7 @@ public class MotorDerby {
 
     public ResultSet executeQuery(String SQL) {
         try {
-            resultSet = statement.executeQuery(SQL);
+            resultSet1 = statement.executeQuery(SQL);
         } catch (SQLException ex) {
             Logger.getLogger(MotorDerby.class.getName()).log(Level.SEVERE, null, ex);
         }

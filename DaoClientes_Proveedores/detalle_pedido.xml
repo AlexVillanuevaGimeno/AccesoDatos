@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<detalle_pedidos>
+    <detalle_pedido>
+        <Id_DetallePedido>1</Id_DetallePedido>
+        <Id_Juguete>1</Id_Juguete>
+        <Cantidad>5</Cantidad>
+    </detalle_pedido>
+    <detalle_pedido>
+        <Id_DetallePedido>2</Id_DetallePedido>
+        <Id_Juguete>2</Id_Juguete>
+        <Cantidad>3</Cantidad>
+    </detalle_pedido>
+    <detalle_pedido>
+        <Id_DetallePedido>3</Id_DetallePedido>
+        <Id_Juguete>3</Id_Juguete>
+        <Cantidad>2</Cantidad>
+    </detalle_pedido>
+    <detalle_pedido>
+        <Id_DetallePedido>4</Id_DetallePedido>
+        <Id_Juguete>4</Id_Juguete>
+        <Cantidad>1</Cantidad>
+    </detalle_pedido>
+    <detalle_pedido>
+        <Id_DetallePedido>5</Id_DetallePedido>
+        <Id_Juguete>5</Id_Juguete>
+        <Cantidad>4</Cantidad>
+    </detalle_pedido>
+</detalle_pedidos>
