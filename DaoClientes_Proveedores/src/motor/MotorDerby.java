@@ -22,7 +22,7 @@ System.out.println("Error en la conexión de la base de datos");
 }
  */
 public class MotorDerby {
-    private String url = "jdbc:mysql://localhost/PruebaPedidos";
+    private String url = "jdbc:mysql://localhost/prov_clientes";
     private String username = "root";
     private String password = "";
 

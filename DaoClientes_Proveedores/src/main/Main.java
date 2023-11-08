@@ -48,7 +48,7 @@ public class Main {
             switch (opcion) {
                 case 1:
                     motorDerby.connect();
-                    String SQL =  "SELECT * FROM " + "DetalleNotaPago" + "where 1=1";
+                    String SQL =  "SELECT * FROM " + "detalle_nota_pago" + " where 1=1";
                     ArrayList<DetalleNotaPago> listaDetalleNota = new ArrayList<>();
 
                     resultSet = motorDerby.executeQuery(SQL);
@@ -72,7 +72,7 @@ public class Main {
                 case 2:
                     System.out.println("Detalles Pedido");
                     motorDerby.connect();
-                    String SQL1 =  "SELECT * FROM " + "DetallePedido" + " where 1=1";
+                    String SQL1 =  "SELECT * FROM " + "detalle_pedido" + " where 1=1";
                     ArrayList<DetallePedido> listaDetallePedido = new ArrayList<>();
                     resultSet = motorDerby.executeQuery(SQL1);
 
@@ -97,7 +97,7 @@ public class Main {
                 case 3:
                     System.out.println("Detalles Albaran");
                     motorDerby.connect();
-                    String SQL2 = "SELECT * FROM "  + "DetalleAlbaran" + "where 1=1";
+                    String SQL2 = "SELECT * FROM "  + "detalle_albaran" + " where 1=1";
                     ArrayList<DetalleAlbaran> listaDetalleAlbaran = new ArrayList<>();
                     resultSet = motorDerby.executeQuery(SQL2);
 
