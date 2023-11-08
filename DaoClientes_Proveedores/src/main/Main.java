@@ -146,10 +146,42 @@ public class Main {
                     break;
 
                 case 5:
-                    System.out.println("QUE TABLA QUIERES EXPORTAR?");
-                    scanner.nextLine();
-                    String nombreTabla = scanner.nextLine();
-                    ExportarTabla.exportarTabla(motorDerby, nombreTabla);
+                    int tabla;
+                    do{
+                        System.out.println("TABLAS A EXPORTAR:");
+                        System.out.println("1. DETALLES NOTA DE PAGO");
+                        System.out.println("2. DETALLES DE PEDIDO");
+                        System.out.println("3. DETALLES ALBARAN");
+                        System.out.println("4. PARTICULAR");
+                        System.out.println("0. Salir");
+
+                        // Obtener la opción del usuario
+                        System.out.print("Elige una opción: ");
+                        scanner.nextLine(); //LIMPIO MEMORIA SCANNER
+                        tabla = scanner.nextInt();
+
+                        switch (tabla){
+                            case 1:
+                                ExportarTabla.exportarTabla(motorDerby, "detalles_nota_pago");
+                                break;
+                            case 2:
+                                ExportarTabla.exportarTabla(motorDerby, "detalles_pedido");
+                                break;
+                            case 3:
+                                ExportarTabla.exportarTabla(motorDerby, "detalles_albaran");
+                                break;
+                            case 4:
+                                ExportarTabla.exportarTabla(motorDerby, "particular");
+                                break;
+                            case 0:
+                                System.out.println("Volviendo al menú principal");
+                                break;
+                            default:
+                                System.out.println("Opción no válida. Por favor, elige una opción válida.");
+                                break;
+                        }
+
+                    }while (tabla != 0);
                     break;
 
                 case 6:
