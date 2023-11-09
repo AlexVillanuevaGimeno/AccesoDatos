@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <juguetes>
   <juguete>
-    <idJuguete>1</idJuguete>
-    <nombreJuguete>Muñeca</nombreJuguete>
-    <precioUnidad>20</precioUnidad>
+    <Id_Juguete>6</Id_Juguete>
+    <Nombre_juguete>Muñeca</Nombre_juguete>
+    <Precio_Unidad>20</Precio_Unidad>
   </juguete>
   <juguete>
-    <idJuguete>2</idJuguete>
-    <nombreJuguete>Carro de Control Remoto</nombreJuguete>
-    <precioUnidad>30</precioUnidad>
+    <Id_Juguete>7</Id_Juguete>
+    <Nombre_juguete>Carro de Control Remoto</Nombre_juguete>
+    <Precio_Unidad>30</Precio_Unidad>
   </juguete>
   <juguete>
-    <idJuguete>3</idJuguete>
-    <nombreJuguete>Rompecabezas</nombreJuguete>
-    <precioUnidad>15</precioUnidad>
+    <Id_Juguete>8</Id_Juguete>
+    <Nombre_juguete>Rompecabezas</Nombre_juguete>
+    <Precio_Unidad>15</Precio_Unidad>
   </juguete>
 </juguetes>

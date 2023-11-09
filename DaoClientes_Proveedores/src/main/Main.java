@@ -201,18 +201,18 @@ public class Main {
 
                         switch (tablaImp){
                             case 1:
-                                ImportarTabla.importarTabla(motorDerby, "ticket", "C:\\Users\\S2-PC00\\Documents\\GitHub\\AccesoDatos\\DaoClientes_Proveedores\\ticket.xml");
+                                ImportarTabla.importarTabla(motorDerby, "ticket", "C:\\Users\\villa\\Documents\\GitHub\\AccesoDatos\\DaoClientes_Proveedores\\ticket.xml");
                                 break;
                             case 2:
-                                ImportarTabla.importarTabla(motorDerby, "empresa_proveedora", "empresa_proveedora");
+                                ImportarTabla.importarTabla(motorDerby, "empresa_proveedora", "C:\\Users\\villa\\Documents\\GitHub\\AccesoDatos\\DaoClientes_Proveedores\\empresaProveedora.xml");
 
                                 break;
                             case 3:
-                                ImportarTabla.importarTabla(motorDerby, "juguete", "juguete");
+                                ImportarTabla.importarTabla(motorDerby, "juguete", "C:\\Users\\villa\\Documents\\GitHub\\AccesoDatos\\DaoClientes_Proveedores\\juguete.xml");
 
                                 break;
                             case 4:
-                                ImportarTabla.importarTabla(motorDerby, "usuario", "usuario");
+                                ImportarTabla.importarTabla(motorDerby, "usuario", "C:\\Users\\villa\\Documents\\GitHub\\AccesoDatos\\DaoClientes_Proveedores\\usuario.xml");
 
                                 break;
                             case 0:

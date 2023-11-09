@@ -22,7 +22,7 @@ System.out.println("Error en la conexión de la base de datos");
 }
  */
 public class MotorDerby {
-    private String url = "jdbc:mysql://localhost/prov_clientes";
+    private String url = "jdbc:mysql://localhost/prov_clientesinpkfk";
     private String username = "root";
     private String password = "";
 
@@ -81,10 +81,21 @@ public class MotorDerby {
 
     public ResultSet executeQuery(String SQL) {
         try {
+            System.out.println("EXECUTE QUERY");
             resultSet1 = statement.executeQuery(SQL);
         } catch (SQLException ex) {
             Logger.getLogger(MotorDerby.class.getName()).log(Level.SEVERE, null, ex);
         }
         return resultSet;
     }
+
+    public boolean existeRegistro(String SQL) {
+        try (ResultSet resultSet = statement.executeQuery(SQL)) {
+            return resultSet.next(); // ==TRUE
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
 }
