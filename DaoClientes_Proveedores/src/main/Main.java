@@ -201,7 +201,7 @@ public class Main {
 
                         switch (tablaImp){
                             case 1:
-                                ImportarTabla.importarTabla(motorDerby, "ticket", "ticket");
+                                ImportarTabla.importarTabla(motorDerby, "ticket", "C:\\Users\\S2-PC00\\Documents\\GitHub\\AccesoDatos\\DaoClientes_Proveedores\\ticket.xml");
                                 break;
                             case 2:
                                 ImportarTabla.importarTabla(motorDerby, "empresa_proveedora", "empresa_proveedora");
