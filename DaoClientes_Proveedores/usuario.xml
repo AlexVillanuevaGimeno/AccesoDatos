@@ -2,29 +2,29 @@
 <usuarios>
   <usuario>
     <Id_Usuario>1</Id_Usuario>
-    <usuario>usuario1</usuario>
-    <password>clave123</password>
+    <Usuario>usuario1</Usuario>
+    <Password>clave123</Password>
     <Nombre_usuario>Juan Pérez</Nombre_usuario>
-    <metodoPago>Tarjeta de Crédito</metodoPago>
-    <telefono>555123456</telefono>
-    <correoElectronico>juan@example.com</correoElectronico>
+    <MetodoPago>Tarjeta de Crédito</MetodoPago>
+    <Telefono>555123456</Telefono>
+    <CorreoElectronico>juan@example.com</CorreoElectronico>
   </usuario>
   <usuario>
     <Id_Usuario>2</Id_Usuario>
-    <usuario>usuario2</usuario>
-    <password>clave456</password>
+    <Usuario>usuario2</Usuario>
+    <Password>clave456</Password>
     <Nombre_usuario>Ana Martínez</Nombre_usuario>
-    <metodoPago>Transferencia Bancaria</metodoPago>
-    <telefono>666789012</telefono>
-    <correoElectronico>ana@example.com</correoElectronico>
+    <MetodoPago>Transferencia Bancaria</MetodoPago>
+    <Telefono>666789012</Telefono>
+    <CorreoElectronico>ana@example.com</CorreoElectronico>
   </usuario>
   <usuario>
     <Id_Usuario>3</Id_Usuario>
-    <usuario>usuario3</usuario>
-    <password>clave789</password>
+    <Usuario>usuario3</Usuario>
+    <Password>clave789</Password>
     <Nombre_usuario>Carlos Rodríguez</Nombre_usuario>
-    <metodoPago>Efectivo</metodoPago>
-    <telefono>777234567</telefono>
-    <correoElectronico>carlos@example.com</correoElectronico>
+    <MetodoPago>Efectivo</MetodoPago>
+    <Telefono>777234567</Telefono>
+    <CorreoElectronico>carlos@example.com</CorreoElectronico>
   </usuario>
 </usuarios>

@@ -68,6 +68,7 @@ public class ImportarTabla {
     private static void importarFila(MotorDerby motor, XMLStreamReader reader, String nombreTabla) throws XMLStreamException {
         StringBuilder columnas = new StringBuilder();
         StringBuilder values = new StringBuilder();
+//        boolean inserto = true;
 
         while (reader.hasNext()) {
             reader.next();
@@ -75,7 +76,7 @@ public class ImportarTabla {
                 String columnName = reader.getLocalName();
                 String columnValue = reader.getElementText();
 
-                columnas.append(columnName).append(", ");
+                columnas.append(columnName).append(",");
                 // Si el valor es numérico, no lo entrecomilles
                 if (esNumero(columnValue)) {
                     values.append(columnValue);
@@ -94,9 +95,9 @@ public class ImportarTabla {
         values.delete(values.length() - 2, values.length());
 
         // Construir la consulta de inserción
-        String query = "INSERT INTO " + nombreTabla + " VALUES (" + values + ")";
-        System.out.println(query + "\n\n");
-        motor.executeUpdate(query);
+        String sql = "INSERT INTO " + nombreTabla + " VALUES (" + values + ")";
+        System.out.println(sql + "\n\n");
+        motor.executeUpdate(sql);
     }
 
     // COMPROBACIONES HACEN QUE EXPLOTE EN EL READER.NEXT() LINEA 56
