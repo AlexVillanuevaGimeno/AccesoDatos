@@ -1,0 +1,28 @@
+<productos>
+    <producto>
+        <id>4</id>
+        <nombre>Impresora Multifunción</nombre>
+        <precio>199.50</precio>
+        <stock>25</stock>
+        <categoria>Oficina</categoria>
+        <descripcion>Impresora que imprime, escanea y copia para todas tus necesidades de oficina.</descripcion>
+    </producto>
+    
+    <producto>
+        <id>5</id>
+        <nombre>Auriculares Bluetooth</nombre>
+        <precio>79.99</precio>
+        <stock>50</stock>
+        <categoria>Audio</categoria>
+        <descripcion>Auriculares inalámbricos con tecnología Bluetooth para una experiencia auditiva sin cables.</descripcion>
+    </producto>
+
+    <producto>
+        <id>6</id>
+        <nombre>Silla Ergonómica</nombre>
+        <precio>149.99</precio>
+        <stock>15</stock>
+        <categoria>Muebles</categoria>
+        <descripcion>Silla diseñada ergonómicamente para brindar comodidad durante largas horas de trabajo.</descripcion>
+    </producto>
+</productos>

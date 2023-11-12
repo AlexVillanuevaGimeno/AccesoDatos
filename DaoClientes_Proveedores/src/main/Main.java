@@ -173,12 +173,12 @@ public class Main {
                             case 4:
                                 ExportarTabla.exportarTabla(motorDerby, "particular");
                                 break;
-                            case 0:
-                                System.out.println("Volviendo al menú principal");
-                                break;
-                            default:
-                                System.out.println("Opción no válida. Por favor, elige una opción válida.");
-                                break;
+                                case 0:
+                                    System.out.println("Volviendo al menú principal");
+                                    break;
+                                default:
+                                    System.out.println("Opción no válida. Por favor, elige una opción válida.");
+                                    break;
                         }
 
                     }while (tabla != 0);

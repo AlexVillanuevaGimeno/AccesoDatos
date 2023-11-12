@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<usuarios>
+    <usuario>
+        <id>1</id>
+        <nombre>Juan Pérez</nombre>
+        <edad>30</edad>
+        <correo>juan@email.com</correo>
+        <telefono>123-456-7890</telefono>
+        <direccion>Calle Principal 123</direccion>
+    </usuario>
+    <usuario>
+        <id>2</id>
+        <nombre>Ana Martínez</nombre>
+        <edad>25</edad>
+        <correo>ana@email.com</correo>
+        <telefono>987-654-3210</telefono>
+        <direccion>Avenida Secundaria 456</direccion>
+    </usuario>
+    <usuario>
+        <id>3</id>
+        <nombre>Carlos Rodríguez</nombre>
+        <edad>40</edad>
+        <correo>carlos@email.com</correo>
+        <telefono>555-123-7890</telefono>
+        <direccion>Calle Secundaria 789</direccion>
+    </usuario>
+</usuarios>
