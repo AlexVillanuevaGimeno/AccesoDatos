@@ -68,6 +68,7 @@ public class ImportarXmlToSql {
             if (reader.isStartElement()) {
                 String columnName = reader.getLocalName();
                 String columnValue = reader.getElementText();
+                System.out.println(columnName + columnValue);
 
                 // Si el valor es numérico o es el campo id, no lo entrecomilles
                 if (esNumero(columnValue)) {

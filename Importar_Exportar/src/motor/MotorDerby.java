@@ -18,10 +18,13 @@ public class MotorDerby {
 
     public void connect() {
         try {
+            Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection(url, username, password);
             statement = connection.createStatement();
         } catch (SQLException ex) {
             Logger.getLogger(MotorDerby.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
     }
 

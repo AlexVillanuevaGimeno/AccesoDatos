@@ -30,7 +30,7 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("Importo en la SQL");
-                    ImportarXmlToSql.importarXml( motorDerby,  "producto",  "C:\\Users\\villa\\Documents\\GitHub\\AccesoDatos\\Importar_Exportar\\producto.xml");
+                    ImportarXmlToSql.importarXml( motorDerby,  "producto",  "C:\\Users\\S2-PC00\\Documents\\GitHub\\AccesoDatos\\Importar_Exportar\\producto.xml");
                     break;
                 case 0:
                     System.out.println("SALIENDO");
