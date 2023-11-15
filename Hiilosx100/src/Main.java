@@ -5,17 +5,12 @@ import java.util.ArrayList;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Hilo> lstHilos = new ArrayList<>();
-        for (int i = 0; i < 100; i++) {
-            Hilo hilo = new Hilo(i);
-            lstHilos.add(hilo);
+        Contador contadorComun = new Contador();
+
+        for (int i = 1; i <= 100; i++) {
+            Thread thread = new Thread(new Hilo(contadorComun, i));
+            thread.start();
         }
-        for (Hilo hilo: lstHilos) {
-            hilo.start();
-            System.out.printf("Cantidad en contador:" + hilo.getCount());
-            System.out.println("\n\n");
-        }
-        System.out.println("Número de hilos en mi lista: " + lstHilos.size());
 
     }
 }

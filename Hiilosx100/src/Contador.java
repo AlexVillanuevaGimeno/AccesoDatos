@@ -1,16 +1,12 @@
 public class Contador {
-    int contador;
+    private static int valor = 0;
 
-    public Contador(int contador) {
-        this.contador = contador++;
+    public static synchronized void incrementar() {
+        valor++;
     }
 
-    public int getContador() {
-        return contador;
-    }
-
-    public void setContador(int contador) {
-        this.contador = contador;
+    public static int obtenerValor() {
+        return valor;
     }
 
 }

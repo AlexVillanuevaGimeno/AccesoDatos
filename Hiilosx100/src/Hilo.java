@@ -1,31 +1,16 @@
 public class Hilo extends  Thread{
-    public static int countAux;
+    private Contador contador;
+    private int id;
 
-    private int count;
-
-    public static int getCountAux() {
-        return countAux;
-    }
-
-    public static void setCountAux(int countAux) {
-        Hilo.countAux = countAux;
-    }
-
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
-    }
-
-    public Hilo(int count) {
-        countAux++;
-        this.count = count;
+    public Hilo(Contador contador, int id) {
+        this.contador = contador;
+        this.id = id;
     }
 
     @Override
     public void run() {
-        System.out.println("Id: " + getCount());
+            contador.incrementar();
+            System.out.println("Hilo " + id + ", Contador: " + contador.obtenerValor());
+
     }
 }
