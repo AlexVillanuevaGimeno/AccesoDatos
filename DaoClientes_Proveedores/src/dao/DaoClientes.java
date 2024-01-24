@@ -11,10 +11,10 @@ import java.util.logging.Logger;
 
 public class DaoClientes {
 
+
     private String sql = "SELECT * FROM ";
     private MotorDerby motorDerby;
     public DaoClientes() {this.motorDerby = new MotorDerby();}
-
 
 
     //COMPLETAR MOSTRANDO EL TICKET
