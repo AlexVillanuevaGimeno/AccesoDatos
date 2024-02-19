@@ -1,0 +1,25 @@
+CREATE OR REPLACE PROCEDURE emp_2minsal AS
+    CURSOR c_emp IS
+        SELECT apellido, oficio, salario FROM emple
+        ORDER BY oficio, salario;
+    vr_emp c_emp%ROWTYPE;
+    oficio_ant EMPLE.OFICIO%TYPE;
+    i NUMBER := 1;
+BEGIN
+    OPEN c_emp;
+    oficio_ant := '*';
+    FETCH c_emp INTO vr_emp;
+    WHILE c_emp%FOUND LOOP
+        IF oficio_ant <> vr_emp.oficio THEN
+            oficio_ant := vr_emp.oficio;
+            i := 1;
+        END IF;
+        IF i <= 2 THEN
+            DBMS_OUTPUT.PUT_LINE(vr_emp.oficio || ' * ' || vr_emp.apellido || ' * ' || vr_emp.salario);
+        END IF;
+        FETCH c_emp INTO vr_emp;
+        i := i + 1;
+    END LOOP;
+    CLOSE c_emp;
+END emp_2minsal;
+/

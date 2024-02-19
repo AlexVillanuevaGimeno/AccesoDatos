@@ -1,0 +1,15 @@
+CREATE OR REPLACE PROCEDURE ver_emple AS
+    CURSOR c_emple IS
+        SELECT APELLIDO, FECHA_ALT FROM EMPLE ORDER BY APELLIDO;
+    v_apellido EMPLE.APELLIDO%TYPE;
+    v_fecha EMPLE.FECHA_ALT%TYPE;
+BEGIN
+    OPEN c_emple;
+    FETCH c_emple INTO v_apellido, v_fecha;
+    WHILE c_emple%FOUND LOOP
+        DBMS_OUTPUT.PUT_LINE(v_apellido || ' --- ' || TO_CHAR(v_fecha, 'DD-MM-YYYY'));
+        FETCH c_emple INTO v_apellido, v_fecha;
+    END LOOP;
+    CLOSE c_emple;
+END ver_emple;
+/

@@ -1,0 +1,17 @@
+CREATE OR REPLACE PROCEDURE emp_5maxsal AS
+    CURSOR c_emp IS
+        SELECT apellido, salario FROM emple
+        ORDER BY salario DESC;
+    vr_emp c_emp%ROWTYPE;
+    i NUMBER := 1;
+BEGIN
+    OPEN c_emp;
+    FETCH c_emp INTO vr_emp;
+    WHILE c_emp%FOUND AND i <= 5 LOOP
+        DBMS_OUTPUT.PUT_LINE(vr_emp.apellido || ' * ' || vr_emp.salario || ' € ');
+        FETCH c_emp INTO vr_emp;
+        i := i + 1;
+    END LOOP;
+    CLOSE c_emp;
+END emp_5maxsal;
+/

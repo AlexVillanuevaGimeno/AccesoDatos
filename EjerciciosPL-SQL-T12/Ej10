@@ -1,0 +1,51 @@
+CREATE OR REPLACE PROCEDURE NUEVOS_PEDIDOS(
+    PEDIDO_NO IN NUMBER,
+    PRODUCTO_NO IN NUMBER,
+    CLIENTE_NO IN NUMBER,
+    UNIDADES IN NUMBER,
+    FECHA_PEDIDO IN DATE DEFAULT SYSDATE
+) AS
+    importe_erroneo EXCEPTION;
+    v_precio_actual PRODUCTOS08.PRECIO_ACTUAL%TYPE;
+    v_limite_credito CLIENTES08.LIMITE_CREDITO%TYPE;
+    v_stock_disponible PRODUCTOS08.STOCK_DISPONIBLE%TYPE;
+    v_comision EMPLE.COMISION%TYPE;
+BEGIN
+    -- Verificar que el pedido, el producto y el cliente existen
+    SELECT PRECIO_ACTUAL INTO v_precio_actual FROM PRODUCTOS08 WHERE PRODUCTO_NO = PRODUCTO_NO;
+    SELECT LIMITE_CREDITO INTO v_limite_credito FROM CLIENTES08 WHERE CLIENTE_NO = CLIENTE_NO;
+    SELECT STOCK_DISPONIBLE INTO v_stock_disponible FROM PRODUCTOS08 WHERE PRODUCTO_NO = PRODUCTO_NO;
+
+    -- Verificar que hay suficientes unidades disponibles del producto
+    IF UNIDADES > v_stock_disponible THEN
+        RAISE importe_erroneo;
+    END IF;
+
+    -- Verificar que el cliente tiene suficiente crédito
+    IF UNIDADES * v_precio_actual > v_limite_credito THEN
+        RAISE importe_erroneo;
+    END IF;
+
+    -- Insertar el pedido
+    INSERT INTO PEDIDOS08 (PEDIDO_NO, PRODUCTO_NO, CLIENTE_NO, UNIDADES, FECHA_PEDIDO)
+    VALUES (PEDIDO_NO, PRODUCTO_NO, CLIENTE_NO, UNIDADES, FECHA_PEDIDO);
+
+    -- Actualizar la columna DEBE de clientes
+    UPDATE CLIENTES08 SET DEBE = DEBE + (UNIDADES * v_precio_actual) WHERE CLIENTE_NO = CLIENTE_NO;
+
+    -- Actualizar las unidades disponibles del producto
+    UPDATE PRODUCTOS08 SET STOCK_DISPONIBLE = STOCK_DISPONIBLE - UNIDADES WHERE PRODUCTO_NO = PRODUCTO_NO;
+
+    -- Incrementar la comisión del empleado
+    SELECT COMISION INTO v_comision FROM EMPLE WHERE EMP_NO = (SELECT EMP_NO FROM CLIENTES08 WHERE CLIENTE_NO = CLIENTE_NO);
+    UPDATE EMPLE SET COMISION = COMISION + (UNIDADES * v_precio_actual * 0.05) WHERE EMP_NO = (SELECT EMP_NO FROM CLIENTES08 WHERE CLIENTE_NO = CLIENTE_NO);
+
+    -- Confirmar la transacción
+    COMMIT;
+EXCEPTION 
+    WHEN importe_erroneo THEN
+        DBMS_OUTPUT.PUT_LINE('ERROR: Pedido no se puede realizar debido a falta de unidades disponibles o crédito insuficiente.');
+    WHEN OTHERS THEN 
+        DBMS_OUTPUT.PUT_LINE('ERROR INESPERADO');
+END;
+/
