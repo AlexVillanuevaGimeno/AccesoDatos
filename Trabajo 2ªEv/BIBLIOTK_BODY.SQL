@@ -1,4 +1,4 @@
-CREATE OR REPLACE PACKAGE BODY BiblioTK AS
+CREATE OR REPLACE PACKAGE BODY Biblio AS
 FUNCTION alta_obra (p_titulo VARCHAR, p_anyo INTEGER DEFAULT NULL) RETURN VARCHAR IS
     p_id VARCHAR(5);
     p_count INTEGER;
@@ -37,7 +37,6 @@ FUNCTION alta_autor (p_nombre VARCHAR, p_apellidos VARCHAR, p_nacimiento DATE DE
     p_maxLengthApellidos NUMBER(3);
     BEGIN
 
-    --SELECT COUNT(*) INTO p_id FROM AUTOR ORDER BY id DESC FETCH FIRST 1 ROWS ONLY;
     SELECT COUNT(*) INTO p_countAux FROM AUTOR;
     SELECT MAX(char_length) INTO p_maxLengthApellidos FROM USER_TAB_COLUMNS WHERE TABLE_NAME = 'AUTOR' AND COLUMN_NAME = 'APELLIDOS';
     SELECT MAX(char_length) INTO p_maxLengthNombre FROM USER_TAB_COLUMNS WHERE TABLE_NAME = 'AUTOR' AND COLUMN_NAME = 'NOMBRE';
@@ -379,5 +378,5 @@ FUNCTION baja_ejemplar (p_id_edicion VARCHAR, p_numero INTEGER) RETURN INTEGER I
 
     END;
 
-END BiblioTK;
+END Biblio;
 /
